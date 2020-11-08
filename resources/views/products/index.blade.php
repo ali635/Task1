@@ -95,8 +95,9 @@
                                     <th class="border-bottom-0">#</th>
                                     <th class="border-bottom-0">اسم المنتج</th>
                                     <th class="border-bottom-0">سعر المنتج</th>
-                                    
+                                    <th class="border-bottom-0">الاصناف</th>
                                     {{-- <th class="border-bottom-0">القسم</th> --}}
+                                    
                                     <th class="border-bottom-0">العمليات</th>
                                 </tr>
                             </thead>
@@ -113,7 +114,7 @@
                                         <td>{{ $product->product_name }} </td>
                                         <td>{{ $product->price }}</td>
                                         
-                                        {{-- <td>{{ $product->varietie->name }}</td> --}}
+                                        <td>{{ $product->varietie->name }}</td>
                                        
                                         <td>
                                             <div class="dropdown">

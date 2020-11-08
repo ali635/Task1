@@ -20,9 +20,9 @@ class Product extends Model
     {
         return $q -> select('id','product_name','varietie_id','price');
     }
-    public function varieties()
+    public function varietie()
     {
-        return $this->belongsTo('App\Model\varieties','varietie_id','id');
+        return $this->belongsTo('App\Model\varieties');
     }
     
     public function suppliers()

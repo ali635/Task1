@@ -11,9 +11,4 @@ class varieties extends Model
         'description'
     ];
     
-
-    public function products()
-    {
-        return $this->hasMany(Product::class, 'product_id');
-    }
 }

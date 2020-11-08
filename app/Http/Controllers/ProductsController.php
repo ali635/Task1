@@ -128,7 +128,10 @@ class ProductsController extends Controller
         
         $products  = DB::table('products');
         if( $request->search){
-            $products = $products->where('product_name', 'LIKE', "%" . $request->search . "%")->paginate(10);
+            $products = $products->where('product_name', 'LIKE', "%" . $request->search . "%")
+                                 ->orWhere('price', 'LIKE', "%" . $request->search . "%")  
+                                 ->orWhere('id', 'LIKE', "%" . $request->search . "%")     
+                                ->paginate(10);
         }
         return view('products.index',compact('products'));
     }
